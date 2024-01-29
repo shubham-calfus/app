@@ -9,7 +9,7 @@ import NavbarMenuCard from "./NavbarMenuCard";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [drawerWidth, setDrawerWidth] = useState("45%");
   const [hoverMenu, setHoverMenu] = useState<SetStateAction<menuOptionType>>();
   const menuOptions: menuOptionType[] = MenuOptions;
@@ -35,6 +35,7 @@ const Navbar = () => {
         anchor="left"
         open={isOpen}
         onClose={() => toggleDrawer()}
+        transitionDuration={{ exit: 500, enter: 500 }}
         PaperProps={{
           sx: { width: drawerWidth },
           lg: { width: drawerWidth },
@@ -59,7 +60,7 @@ const Navbar = () => {
                   onMouseEnter={() => handleOptionHovered(menuItem)}
                 >
                   <Image
-                    src={"./customers.svg"}
+                    src={"/customers.svg"}
                     width={28}
                     height={28}
                     alt={menuItem.title}
@@ -97,7 +98,7 @@ const Navbar = () => {
       </Drawer>
 
       {/* NAVBAR */}
-      <div className="flex w-6/12">
+      <div className="flex md:w-6/12 w-vw">
         <div className="py-4 px-2">{drawerButton}</div>
         <Image
           src="./trade-full-logo.svg"

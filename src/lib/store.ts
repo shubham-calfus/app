@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { postApi } from "./api/usersApi/usersApi";
-import loadingSlice from "./features/loading/loadingSlice";
+import stepReducer from "@/lib/features/customerRegistrationSlice/customerRegistrationSlice";
 export const store = configureStore({
   reducer: {
-    loading: loadingSlice,
+    steps: stepReducer,
     [postApi.reducerPath]: postApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
