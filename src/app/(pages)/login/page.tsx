@@ -6,6 +6,7 @@ import TextField from "@mui/material/TextField";
 import LoginForm from "./_form/LoginForm";
 
 const Login = () => {
+  console.log("Login page");
   return (
     <div className="md:w-8/12 flex items-center justify-center h-screen">
       <div className="w-9/12 xl:max-w-lg mx-4 m-auto p-6 bg-white rounded-lg">

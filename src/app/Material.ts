@@ -5,6 +5,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormHelperText from "@mui/material/FormHelperText";
 import { alpha, styled } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
+import Drawer from "@mui/material/Drawer";
 
 export {
   TextField,
@@ -15,4 +16,5 @@ export {
   alpha,
   styled,
   InputBase,
+  Drawer,
 };
