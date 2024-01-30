@@ -4,9 +4,9 @@ import Navbar from "./navbar/Navbar";
 
 const layout = (props: any) => {
   return (
-    <div>
+    <div className="h-full">
       <Navbar></Navbar>
-      {props.children}
+      <div className="">{props.children}</div>.
     </div>
   );
 };

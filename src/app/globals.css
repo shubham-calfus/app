@@ -7,3 +7,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  height: auto;
+}
+
+.input-lbl {
+  color: var(--Base-Primary, #232930);
+  font-feature-settings: "clig" off, "liga" off;
+  /* Paragraph/SM | Reg */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}

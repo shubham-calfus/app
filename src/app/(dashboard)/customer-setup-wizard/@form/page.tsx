@@ -1,7 +1,11 @@
-import React from "react";
+import BusinessInformationForm from "./businessInformationForm/BusinessInformationForm";
 
-const page = () => {
-  return <div>page</div>;
-};
-
-export default page;
+export default function Form() {
+  return (
+    <>
+      <div>
+        <BusinessInformationForm />
+      </div>
+    </>
+  );
+}

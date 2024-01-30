@@ -48,6 +48,7 @@ const steps = [
 
 const CustomerRegistration = () => {
   const [activeStep, setActiveStep] = useState(0);
+  const [activeStepChild, setActiveStepChild] = useState(0);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -63,37 +64,31 @@ const CustomerRegistration = () => {
 
   const dispatch = useDispatch();
   const completedSteps = useSelector((state: AppStore) => state.steps);
-  console.log("======>", completedSteps);
   const handleStepCompletion = (title: string, childTitle: string) => {
     dispatch(markStepAsCompleted({ title, childTitle }));
   };
 
   return (
-    <div className="border-2 border-red-400 p-2">
+    <div className="p-2 py-4 px-6">
       <Box sx={{ maxWidth: 400 }}>
-        <Stepper
-          alternativeLabel={true}
-          activeStep={activeStep}
-          orientation="vertical"
-        >
+        <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((step, index) => (
             <Step key={step.title}>
               <StepLabel
                 icon={
-                  activeStep <= step.childrenSteps.length ? (
+                  activeStep >= step.childrenSteps.length ? (
                     <TripOriginRoundedIcon color="primary" fontSize="small" />
                   ) : (
                     <DoneIcon color="success" fontSize="small" />
                   )
                 }
               >
-                {step.title} --{step.childrenSteps.length} - {activeStep} --{" "}
-                {activeStep <= step.childrenSteps.length ? "true" : "false"}
+                {step.title}
               </StepLabel>
               <StepContent>
                 <Stepper
                   connector={<StepConnector className="hidden" />}
-                  activeStep={activeStep}
+                  activeStep={activeStepChild}
                   orientation="vertical"
                 >
                   {step.childrenSteps.map((childStep, index) => (
@@ -119,24 +114,6 @@ const CustomerRegistration = () => {
             </Step>
           ))}
         </Stepper>
-
-        <div>
-          <Button
-            variant="contained"
-            onClick={handleNext}
-            sx={{ mt: 1, mr: 1 }}
-          >
-            Next
-            {/* {index === steps.length - 1 ? "Finish" : "Continue"} */}
-          </Button>
-          <Button
-            // disabled={index === 0}
-            onClick={handleBack}
-            sx={{ mt: 1, mr: 1 }}
-          >
-            Back
-          </Button>
-        </div>
 
         {activeStep === steps.length && (
           <Paper square elevation={0} sx={{ p: 3 }}>

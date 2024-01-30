@@ -12,9 +12,7 @@ const Layout = ({
   children: React.ReactNode;
   overview: React.ReactNode;
 }) => {
-  const isLoading: boolean = useSelector(
-    (state: AppStore) => state.loading.isLoading
-  );
+  const isLoading: boolean = useSelector((state: AppStore) => true);
 
   return (
     <>

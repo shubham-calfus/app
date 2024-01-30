@@ -9,16 +9,17 @@ const StyledInputBox = styled(InputBase)(({ theme }) => ({
   "& .MuiInputBase-input": {
     borderRadius: 4,
     position: "relative",
-    backgroundColor: theme.palette.mode === "light" ? "#F3F6F9" : "#1A2027",
+    backgroundColor: theme.palette.mode === "light" ? "" : "#1A2027",
     border: "1px solid",
-    borderColor: theme.palette.mode === "light" ? "#E0E3E7" : "#2D3843",
+    borderColor:
+      theme.palette.mode === "light" ? "rgba(0, 112, 210, 0.30)" : "#2D3843",
     fontSize: 16,
     width: "100%",
-    padding: "10px 12px",
+    padding: "8px 12px",
     transition: theme.transitions.create([
       "border-color",
       "background-color",
-      "box-shadow",
+      // "box-shadow",
     ]),
     // Use the system font instead of the default Roboto font.
     fontFamily: [
@@ -64,4 +65,4 @@ const QontoConnector = styled(StepConnector)(({ theme }) => ({
   },
 }));
 
-export { StyledInputBox , QontoConnector};
+export { StyledInputBox, QontoConnector };
