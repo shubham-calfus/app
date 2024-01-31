@@ -3,7 +3,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@reduxjs/toolkit/query";
 import { AppStore } from "@/lib/store";
-import bgImg from "";
 
 const Layout = ({
   children,

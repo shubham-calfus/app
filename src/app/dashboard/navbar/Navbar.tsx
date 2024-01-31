@@ -74,7 +74,7 @@ const Navbar = () => {
                     </span>
                   </div>
 
-                  <div className="absolute text-xs top-[40%] right-4 text-gray-400">
+                  <div className="absolute text-xs top-[40%] right-4 text-base-secondary-400">
                     <ArrowForwardIosRoundedIcon
                       fontSize="inherit"
                       color="inherit"

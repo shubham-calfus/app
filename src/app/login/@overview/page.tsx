@@ -2,7 +2,7 @@ import React from "react";
 
 const Overview = () => {
   return (
-    <div className="md:w-4/12 flex justify-center bg-black/60 text-white p-4">
+    <div className="md:w-4/12 flex justify-center bg- text-white p-4">
       <div className="flex flex-col justify-center">
         {/* <iframe
           width="300"

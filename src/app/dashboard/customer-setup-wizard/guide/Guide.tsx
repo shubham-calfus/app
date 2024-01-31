@@ -4,7 +4,7 @@ import { guidance } from "./guide.constant";
 
 const Guide = () => {
   return (
-    <div className="p-6 bg-gray-100 rounded-xl w-80 h-fit">
+    <div className="p-6 bg-background-medium rounded-xl w-80 h-fit">
       <div className="text-base font-bold flex gap-2">
         <Image src={"/rocket.svg"} height={25} width={25} alt="img"></Image>
         Guidance for success
@@ -15,7 +15,7 @@ const Guide = () => {
           <div key={point.heading}>
             <div className="text-sm font-medium mt-8 mb-3 ">
               {point.heading}
-              <div className="text-xs font-medium text-gray-500">
+              <div className="text-xs font-medium text-base-secondary-500">
                 {point.description}
               </div>
             </div>

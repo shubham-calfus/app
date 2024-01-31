@@ -17,7 +17,9 @@ export default function CustomerManagement() {
       <div className="h-screen border-spacing-1 flex justify-center ">
         <div className="w-[97%] h-44 rounded-lg border-spacing-1">
           <div className=" h-[26%] bg-white flex justify-between items-center">
-            <h1 className="text-3xl text-gray-800">Customer Management</h1>
+            <h1 className="text-3xl text-base-secondary-800">
+              Customer Management
+            </h1>
             <div className="w-[18%] rounded-lg h-[70%] bg-blue-100 flex items-center justify-between pl-1 pr-1">
               {backendRegions.map((region, index) => (
                 <button

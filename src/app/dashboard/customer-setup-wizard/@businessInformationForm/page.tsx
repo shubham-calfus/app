@@ -53,11 +53,11 @@ const BusinessInformationForm = () => {
     },
   });
   return (
-    <div className="border-l-2 py-6 px-8">
+    <div className="border-l-2 border-stroke-medium py-6 px-8">
       <div className="pb-2">Setup complete business information</div>
-      <div className="flex border-t-2 py-4">
+      <div className="flex border-t-2 border-stroke-medium py-4">
         <form onSubmit={formik.handleSubmit} className="flex-grow pr-6 ">
-          <div className="flex gap-4">
+          <div className="flex gap-8">
             <div className="w-full">
               <div className="input-lbl">Customer Company Name</div>
               <StyledInputBox

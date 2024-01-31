@@ -15,7 +15,6 @@ const NavbarMenuCard = ({
   description,
   logoPath,
 }: props) => {
-  console.log("childrenMenu", childrenMenu);
   return (
     <div>
       <div className="p-2 flex gap-3 pt-6 pb-16 border-b border-gray-600/10">
@@ -33,7 +32,7 @@ const NavbarMenuCard = ({
               key={index}
             >
               <div className="text-xs font-medium">{menu.title}</div>
-              <div className="text-xs font-normal text-gray-400">
+              <div className="text-xs font-normal text-base-secondary-400">
                 {menu.description}
               </div>
             </div>

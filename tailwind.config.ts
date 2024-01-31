@@ -7,22 +7,34 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    // colors: {
-    //   transparent: "transparent",
-    //   current: "currentColor",
-    //   white: "#ffffff",
-    //   theme: {
-    //     main: "#0070D2",
-    //     200: "#a5f3fc",
-    //     300: "#67e8f9",
-    //     400: "#22d3ee",
-    //     500: "#06b6d4",
-    //     600: "#0891b2",
-    //     700: "#0e7490",
-    //     800: "#155e75",
-    //     900: "#164e63",
-    //   },
-    // },
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      white: "#ffffff",
+      primary: {
+        main: "#0070D2",
+        inverse: "#FFFFFF",
+      },
+      base: {
+        primary: "#232930",
+        secondary: "#66727A",
+      },
+      background: {
+        medium: "#EFF1F3",
+        strong: "#DFE3E6",
+        low: "#FFFFFF",
+        weak: "#F9FAFB",
+      },
+      stroke: { medium: "#DFE3E6", strong: "#CED1D3" },
+      alert: {
+        positive: {
+          main: "#36B984",
+        },
+        neutral: {
+          main: "#F19100",
+        },
+      },
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

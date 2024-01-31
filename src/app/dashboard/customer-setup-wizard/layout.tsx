@@ -1,6 +1,7 @@
 "use client";
 import React, { ReactNode } from "react";
 import { Button } from "@/app/Material";
+import FormLayout from "./FormLayout";
 
 type props = {
   children: React.ReactNode;
@@ -22,11 +23,10 @@ const layout = (props: props) => {
     customerContact,
     tradeFullSolutions,
   } = props;
-  console.log("prop", props);
 
   return (
-    <div className="my-4 mx-6 rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] px-6 py-4 border ">
-      <div className="border-b flex justify-between  pb-4">
+    <div className="my-4 mx-6 rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] px-6 py-4 border border-stroke-medium">
+      <div className="border-b flex justify-between border-stroke-medium pb-4">
         <div className="text-2xl font-medium">Customer Setup Wizard</div>
         <div className="flex gap-3">
           <Button
@@ -50,10 +50,14 @@ const layout = (props: props) => {
       <div className="flex">
         {/* <div className="w-3/12 pl-4">{children}</div> */}
         <div className="w-1/5 my-6 ml-8">{stepper}</div>
-        {/* <div className="w-4/5">{businessInformationForm}</div> */}
-        {/* <div className="w-4/5">{customerContact}</div> */}
-        <div className="w-4/5">{tradeFullSolutions}</div>
-        <div className="mt-">{guide}</div>
+        <FormLayout>
+          {tradeFullSolutions}
+          {/* <div >{businessInformationForm}</div>
+          <div >{customerContact}</div>
+          <div >{tradeFullSolutions}</div> */}
+          {/* <div className="mt-">{guide}</div> */}
+        </FormLayout>
+        {/*  */}
       </div>
     </div>
   );

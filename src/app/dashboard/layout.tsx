@@ -8,7 +8,7 @@ const layout = (props: any) => {
       <div className="h-10">
         <Navbar></Navbar>
       </div>
-      <div className="">{props.children}</div>.
+      <div className="">{props.children}</div>
     </div>
   );
 };
