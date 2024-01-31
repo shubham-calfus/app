@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import { guidance } from "./guid.constant";
+import { guidance } from "./guide.constant";
 
-const Guid = () => {
+const Guide = () => {
   return (
-    <div className="p-6 bg-gray-100 rounded-xl w-96 h-fit">
+    <div className="p-6 bg-gray-100 rounded-xl w-80 h-fit">
       <div className="text-base font-bold flex gap-2">
         <Image src={"/rocket.svg"} height={25} width={25} alt="img"></Image>
         Guidance for success
@@ -43,4 +43,4 @@ const Guid = () => {
   );
 };
 
-export default Guid;
+export default Guide;

@@ -46,7 +46,7 @@ const steps = [
   },
 ];
 
-const CustomerRegistration = () => {
+const StepperView = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [activeStepChild, setActiveStepChild] = useState(0);
 
@@ -69,7 +69,7 @@ const CustomerRegistration = () => {
   };
 
   return (
-    <div className="p-2 py-4 px-6">
+    <div>
       <Box sx={{ maxWidth: 400 }}>
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((step, index) => (
@@ -128,4 +128,4 @@ const CustomerRegistration = () => {
   );
 };
 
-export default CustomerRegistration;
+export default StepperView;

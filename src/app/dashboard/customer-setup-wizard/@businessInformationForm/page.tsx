@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { StyledInputBox } from "@/app/MaterialStyledComponents";
 import { TextField } from "@/app/Material";
-import Guide from "@/app/(dashboard)/customer-setup-wizard/@form/Guid/Guid";
+import Guide from "@/app/dashboard/customer-setup-wizard/guide/Guide";
 
 interface FormValues {
   customerCompanyName: string;
@@ -55,8 +55,8 @@ const BusinessInformationForm = () => {
   return (
     <div className="border-l-2 py-6 px-8">
       <div className="pb-2">Setup complete business information</div>
-      <div className="flex justify-between border-t py-8 ">
-        <form onSubmit={formik.handleSubmit} className="flex-grow pr-6">
+      <div className="flex border-t-2 py-4">
+        <form onSubmit={formik.handleSubmit} className="flex-grow pr-6 ">
           <div className="flex gap-4">
             <div className="w-full">
               <div className="input-lbl">Customer Company Name</div>
@@ -200,7 +200,7 @@ const BusinessInformationForm = () => {
 
           {/* helperText={formik.touched.country && formik.errors.country} */}
         </form>
-        <Guide />
+        <Guide></Guide>
       </div>
     </div>
   );
